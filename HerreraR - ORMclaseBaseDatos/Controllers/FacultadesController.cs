@@ -21,7 +21,8 @@ namespace HerreraR___ORMclaseBaseDatos.Controllers
         // GET: Facultades
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Facultad.ToListAsync());
+            var ListaFacultades = await _context.Facultad.ToListAsync();    
+            return View(ListaFacultades);
         }
 
         // GET: Facultades/Details/5
