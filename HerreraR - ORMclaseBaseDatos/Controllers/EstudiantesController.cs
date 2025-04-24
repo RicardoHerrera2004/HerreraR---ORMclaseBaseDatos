@@ -47,7 +47,7 @@ namespace HerreraR___ORMclaseBaseDatos.Controllers
         // GET: Estudiantes/Create
         public IActionResult Create()
         {
-            ViewData["CarreraId"] = new SelectList(_context.Carrera, "Id", "Id");
+            ViewData["CarreraId"] = new SelectList(_context.Carrera, "Id", "Nombre");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace HerreraR___ORMclaseBaseDatos.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CarreraId"] = new SelectList(_context.Carrera, "Id", "Id", estudiante.CarreraId);
+            ViewData["CarreraId"] = new SelectList(_context.Carrera, "Id", "Nombre", estudiante.CarreraId);
             return View(estudiante);
         }
 
@@ -81,7 +81,7 @@ namespace HerreraR___ORMclaseBaseDatos.Controllers
             {
                 return NotFound();
             }
-            ViewData["CarreraId"] = new SelectList(_context.Carrera, "Id", "Id", estudiante.CarreraId);
+            ViewData["CarreraId"] = new SelectList(_context.Carrera, "Id", "Nombre", estudiante.CarreraId);
             return View(estudiante);
         }
 
@@ -117,7 +117,7 @@ namespace HerreraR___ORMclaseBaseDatos.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CarreraId"] = new SelectList(_context.Carrera, "Id", "Id", estudiante.CarreraId);
+            ViewData["CarreraId"] = new SelectList(_context.Carrera, "Id", "Nombre", estudiante.CarreraId);
             return View(estudiante);
         }
 

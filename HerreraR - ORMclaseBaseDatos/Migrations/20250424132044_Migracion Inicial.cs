@@ -41,7 +41,7 @@ namespace HerreraR___ORMclaseBaseDatos.Migrations
                         column: x => x.FacultadId,
                         principalTable: "Facultad",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -62,7 +62,7 @@ namespace HerreraR___ORMclaseBaseDatos.Migrations
                         column: x => x.CarreraId,
                         principalTable: "Carrera",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

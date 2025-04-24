@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HerreraR___ORMclaseBaseDatos.Migrations
 {
     [DbContext(typeof(SQL_ServerContext))]
-    [Migration("20250423135629_Migracion Inicial")]
+    [Migration("20250424132044_Migracion Inicial")]
     partial class MigracionInicial
     {
         /// <inheritdoc />
